@@ -1,3 +1,32 @@
+<?php
+
+function generarCarrusel(String $carpeta)
+{
+    // Buscar imágenes
+    $imagenes = glob($carpeta . '/*.{jpg,jpeg,png,gif,webp,JPG,JPEG,PNG,GIF,WEBP}', GLOB_BRACE);
+
+    // Ordenarlas
+    sort($imagenes);
+
+    $html = '';
+
+    foreach ($imagenes as $i => $imagen) {
+
+        $active = ($i == 0) ? ' active' : '';
+
+        $nombre = basename($imagen);
+
+        $html .= '
+            <div class="carousel-item' . $active . '">
+                <a href="' . $imagen . '" class="glightbox" data-gallery="galeria">
+                    <img src="' . $imagen . '" class="d-block w-100" alt="' . htmlspecialchars($nombre) . '">
+                </a>
+            </div>';
+    }
+
+    return $html;
+}
+?>
 <!doctype html>
 <html class="no-js" lang="es">
 
@@ -21,14 +50,12 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- TABLER ICONS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
-
-
-
+    <!-- GLIGHBOX -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
     <!-- Bootstrap JS (IMPORTANTE) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
 </head>
 
 <body class="bg-ligth">
@@ -110,9 +137,6 @@
                                 <h2 class="slider_title wow fadeInLeftBig" data-wow-duration="1.3s"
                                     data-wow-delay="0.2s">Jornada Nacional de Reforestación y Restauración<span
                                         class="text-success ml-3"> 2026</span></h2>
-                                <p class="wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.5s">Lorem ipsum
-                                    dolor amet, consetetur sadipscing elitr sed diam nonumy eirmod tempor invidun
-                                    dolore.</p>
                                 <a href="javascript:void(0)" class="wow fadeInLeftBig btn btn-success mt-2 btn-lg"
                                     data-wow-duration="1.3s" data-wow-delay="0.8s"><i
                                         class="ti ti-edit-circle fs-20"></i> Registrarme</a>
@@ -135,17 +159,17 @@
                                         <div class="single_counter counter_1 d-flex justify-content-center align-items-center wow fadeInUpBig"
                                             data-wow-duration="1.3s" data-wow-delay="0.2s">
                                             <div class="counter_wrapper">
-                                                <h2><i class="ti ti-seedling text-muted"></i></h2>
+                                                <h2><i class="ti ti-seedling text-muted mt-1"></i></h2>
                                                 <span class="counter">534,000</span>
-                                                <p class="text-success">Cantidad de Planta</p>
+                                                <p class="text-success mb-1">Planta</p>
                                             </div> <!-- single wrapper -->
                                         </div>
                                         <div class="single_counter counter_2 d-flex justify-content-center align-items-center wow fadeInUpBig"
                                             data-wow-duration="1.3s" data-wow-delay="0.2s">
                                             <div class="counter_wrapper">
-                                                <h2><i class="ti ti-lasso-polygon text-muted"></i></h2>
+                                                <h2><i class="ti ti-lasso-polygon text-muted mt-1"></i></h2>
                                                 <span class="counter">1,534</span>
-                                                <p class="text-success">Superficie</p>
+                                                <p class="text-success mb-1">Superficie</p>
                                             </div> <!-- single wrapper -->
                                         </div>
                                     </div>
@@ -167,7 +191,8 @@
             </div>
             <div class="row">
                 <div class="col-lg-12 p-3">
-                    <table class="table table-striped table-bordered shadow">
+                    <table class="table table-striped table-bordered shadow wow fadeInDown" data-wow-duration="1.3s"
+                        data-wow-delay="0.2s">
                         <thead>
                             <tr class="bg-tinto text-white">
                                 <td>Actividad</td>
@@ -189,7 +214,8 @@
                         </tbody>
                     </table>
                     <br>
-                    <table class="table table-bordered table-striped shadow">
+                    <table class="table table-bordered table-striped shadow wow fadeInDown" data-wow-duration="1.3s"
+                        data-wow-delay="0.2s">
                         <thead>
                             <tr class="bg-green text-white">
                                 <td>Actividad</td>
@@ -334,7 +360,8 @@
 
     <!--====== SERVICES PART START ======-->
 
-    <section id="recomendacion" class="services_area pt-80">
+    <section id="recomendacion" class="services_area pt-80 wow fadeInUp" data-wow-duration="1.3s"
+        data-wow-delay="0.2s">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-12">
@@ -386,7 +413,7 @@
 
     <!--====== TEAM PART START ======-->
 
-    <section id="galeria" class="team_area pt-120 pb-130">
+    <section id="galeria" class="team_area pt-120 pb-100">
         <div class="section_title text-center">
             <h3 class="title">Galeria de imagenes</h3>
             <div class="container mt-2">
@@ -397,31 +424,11 @@
                     <!-- Imágenes -->
                     <div class="carousel-inner">
 
-                        <div class="carousel-item active">
-                            <a href="https://picsum.photos/id/1015/1400/900" class="glightbox" data-gallery="galeria">
+                        <?Php
 
-                                <img src="https://picsum.photos/id/1015/900/500" class="d-block w-100" alt="Imagen 1">
+                        echo generarCarrusel('assets/images/galeria/');
 
-                            </a>
-                        </div>
-
-                        <div class="carousel-item">
-                            <a href="https://picsum.photos/id/1025/1400/900" class="glightbox" data-gallery="galeria">
-
-                                <img src="https://picsum.photos/id/1025/900/500" class="d-block w-100" alt="Imagen 2">
-
-                            </a>
-                        </div>
-
-
-                        <div class="carousel-item">
-                            <a href="https://picsum.photos/id/1035/1400/900" class="glightbox" data-gallery="galeria">
-
-                                <img src="https://picsum.photos/id/1035/900/500" class="d-block w-100" alt="Imagen 3">
-
-                            </a>
-                        </div>
-
+                        ?>
                     </div>
 
 
@@ -447,7 +454,7 @@
 
     <!--====== TEAM PART ENDS ======-->
     <!--====== CONTACT PART START ======-->
-    <section id="registro" class="contact_area pt-120 pb-130">
+    <section id="registro" class="contact_area pt-80 pb-130">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
@@ -459,43 +466,66 @@
                 </div>
             </div> <!-- row -->
             <div class="contact_form">
-                <form action="assets/contact.php" method="POST" id="contact-form">
+                <form action="assets/contact.php" method="POST" id="contact-form" class="wow zoomIn" data-wow-duration="1.3s"
+                    data-wow-delay="0.2s">
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="single_form">
-                                <input type="text" name="name" id="name" placeholder="Name">
+                                <input type="text" required name="name" id="name" placeholder="Nombre">
                             </div> <!-- single form -->
                         </div>
                         <div class="col-lg-6">
                             <div class="single_form">
-                                <input type="text" name="phone" id="phone" placeholder="Phone">
+                                <input type="tel" required name="phone" id="phone" placeholder="Teléfono">
                             </div> <!-- single form -->
                         </div>
                         <div class="col-lg-6">
                             <div class="single_form">
-                                <input type="email" name="email" id="email" placeholder="Email">
+                                <input type="email" required name="email" id="email" placeholder="Correo electrónico">
                             </div> <!-- single form -->
                         </div>
                         <div class="col-lg-6">
                             <div class="single_form">
-                                <select id="country" name="country">
-                                    <option value="0" selected disabled>Select Trip</option>
-                                    <option value="1">Trip 1</option>
-                                    <option value="2">Trip 2</option>
-                                    <option value="3">Trip 3</option>
-                                    <option value="4">Trip 4</option>
-                                    <option value="5">Trip 5</option>
+                                <select required name="estado">
+                                    <option value="" selected="">Estado</option>
+                                    <option value="01">AGUASCALIENTES</option>
+                                    <option value="02">BAJA CALIFORNIA</option>
+                                    <option value="03">BAJA CALIFORNIA SUR</option>
+                                    <option value="04">CAMPECHE</option>
+                                    <option value="05">COAHUILA DE ZARAGOZA</option>
+                                    <option value="06">COLIMA</option>
+                                    <option value="07">CHIAPAS</option>
+                                    <option value="08">CHIHUAHUA</option>
+                                    <option value="09">CIUDAD DE MÉXICO</option>
+                                    <option value="10">DURANGO</option>
+                                    <option value="11">GUANAJUATO</option>
+                                    <option value="12">GUERRERO</option>
+                                    <option value="13">HIDALGO</option>
+                                    <option value="14">JALISCO</option>
+                                    <option value="15">MÉXICO</option>
+                                    <option value="16">MICHOACÁN DE OCAMPO</option>
+                                    <option value="17">MORELOS</option>
+                                    <option value="18">NAYARIT</option>
+                                    <option value="19">NUEVO LEÓN</option>
+                                    <option value="20">OAXACA</option>
+                                    <option value="21">PUEBLA</option>
+                                    <option value="22">QUERÉTARO</option>
+                                    <option value="23">QUINTANA ROO</option>
+                                    <option value="24">SAN LUIS POTOSÍ</option>
+                                    <option value="25">SINALOA</option>
+                                    <option value="26">SONORA</option>
+                                    <option value="27">TABASCO</option>
+                                    <option value="28">TAMAULIPAS</option>
+                                    <option value="29">TLAXCALA</option>
+                                    <option value="30">VERACRUZ DE IGNACIO DE LA LLAVE</option>
+                                    <option value="31">YUCATÁN</option>
+                                    <option value="32">ZACATECAS</option>
                                 </select>
                             </div> <!-- single form -->
                         </div>
                         <div class="col-lg-12">
                             <div class="single_form">
-                                <textarea name="message" id="message" placeholder="Message"></textarea>
-                            </div> <!-- single form -->
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="single_form">
-                                <button type="submit" class="main-btn">Send Message</button>
+                                <button type="submit" class="main-btn btn-danger">Enviar registro</button>
                             </div> <!-- single form -->
                         </div>
                     </div> <!-- row -->
@@ -508,60 +538,24 @@
     <!--====== FOOTER PART START ======-->
 
     <section id="footer" class="footer_area">
-        <div class="footer_widget pt-80 pb-130">
+        <div class="footer_widget pt-20 pb-20">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-md-6 order-md-1 order-lg-1">
                         <div class="footer_about mt-50">
                             <a href="#"><img style="width:300px" src="assets/images/logo.png" alt="logo"></a>
-                            <p>Lorem ipsum dolor sifsddt amet, conse tetur sadipscing elitr, sed diam onumy eirmod
-                                tempor invidunt ut labore et dolore magna aliquya.</p>
+                            <p><i class="ti ti-map-pin"></i> Av. Perif. Pte. Manuel Gómez Morin 5360, San Juan de Ocotán, 45019 Zapopan, Jal.</p>
                             <ul class="social">
-                                <li><a class="social_1" href="javascript:void(0)"><i
-                                            class="lni lni-facebook-original"></i></a></li>
-                                <li><a class="social_2" href="javascript:void(0)"><i
-                                            class="lni lni-twitter-original"></i></a></li>
-                                <li><a class="social_3" href="javascript:void(0)"><i
-                                            class="lni lni-instagram-original"></i></a></li>
-                                <li><a class="social_4" href="javascript:void(0)"><i
-                                            class="lni lni-linkedin-original"></i></a></li>
+                                <li><a target="_blank" class="btn-primary" href="https://www.facebook.com/CONAFOR.Central"><i class="ti ti-brand-facebook"></i></a></li>
+                                <li><a target="_blank" class="btn-info ti ti-brand-twitter" href="https://x.com/CONAFOR?lang=en"></a></li>
+                                <li><a target="_blank" class="btn-danger" href="https://www.youtube.com/user/conaforgob">
+                                        <i class="ti ti-brand-youtube"></i></a></li>
                             </ul>
                         </div> <!-- footer about -->
                     </div>
-                    <div class="col-lg-4 col-md-12 order-md-3 order-lg-2">
-                        <div class="footer_link_wrapper d-flex flex-wrap">
-                            <div class="footer_link mt-45">
-                                <h4 class="footer_title">Quick Link</h4>
-                                <ul class="link">
-                                    <li><a href="javascript:void(0)">Home</a></li>
-                                    <li><a href="javascript:void(0)">About</a></li>
-                                    <li><a href="javascript:void(0)">Trip Pacakge</a></li>
-                                    <li><a href="javascript:void(0)">Services</a></li>
-                                    <li><a href="javascript:void(0)">Gallery</a></li>
-                                </ul>
-                            </div> <!-- footer link -->
-                            <div class="footer_link mt-45">
-                                <h4 class="footer_title">Support</h4>
-                                <ul class="link">
-                                    <li><a href="javascript:void(0)">Customer Support</a></li>
-                                    <li><a href="javascript:void(0)">Privacy & Policy</a></li>
-                                    <li><a href="javascript:void(0)">Terms & Condition</a></li>
-                                    <li><a href="javascript:void(0)">Forum</a></li>
-                                    <li><a href="javascript:void(0)">Tour Guide</a></li>
-                                </ul>
-                            </div> <!-- footer link -->
-                        </div> <!-- footer link wrapper -->
-                    </div>
-                    <div class="col-lg-4 col-md-6 order-md-2 order-lg-3">
+                    <div class="col-lg-6 offset-lg-2 col-md-6 order-md-2 order-lg-3">
                         <div class="footer_subscribe mt-45">
-                            <h4 class="footer_title">Subscribe Newsletter</h4>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadip scing elitr, sed diam.</p>
-                            <div class="subscribe_form">
-                                <form action="#">
-                                    <input type="text" placeholder="Enter email">
-                                    <button><i class="lni lni-arrow-right"></i></button>
-                                </form>
-                            </div>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.31702024935!2d-103.45517780288507!3d20.69734738905311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428a92c72c16603%3A0x813b7aa2f8a8c846!2sCONAFOR!5e0!3m2!1ses-419!2smx!4v1784584324762!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                         </div> <!-- footer subscribe -->
                     </div>
                 </div> <!-- row -->
@@ -590,8 +584,7 @@
     <script src="assets/js/wow.min.js"></script>
     <!--====== Main js ======-->
     <script src="assets/js/main.js"></script>
-
-
+    <!-- GLIGhTBOX -->
     <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
     <script>
         const lightbox = GLightbox({
@@ -601,8 +594,11 @@
             zoomable: true,
             draggable: true
         });
-    </script>
 
+        $(document).ready(function() {
+            $('select[name=estado]').attr('style', 'position:absolute;opacity:0 !important;')
+        })
+    </script>
 </body>
 
 </html>
