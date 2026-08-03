@@ -56,6 +56,11 @@ function generarCarrusel(String $carpeta)
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- JQUERY -->
     <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+
+    <!-- LEAFLET -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-omnivore/leaflet-omnivore.min.js"></script>
 </head>
 
 <body class="bg-ligth">
@@ -148,8 +153,8 @@ function generarCarrusel(String $carpeta)
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <h3 class="text-white"><br><br>Fecha del evento
-                                            <br><i class="ti ti-calendar-week"></i> <span class="fs-20 text-warning">27
-                                                de Julio
+                                            <br><i class="ti ti-calendar-week"></i> <span class="fs-20 text-warning">09
+                                                de Agosto
                                                 del 2026</span>
                                         </h3>
                                     </div>
@@ -343,14 +348,26 @@ function generarCarrusel(String $carpeta)
 
     <!--====== DESTINATION PART START ======-->
 
-    <section id="ubicacion" class="destination_area pt-130 pb-130">
-
+    <section id="ubicacion" class="destination_area pt-80 pb-10 container-fluid">
         <div class="section_title text-center pb-25">
             <h3 class="title">Ubicación del predio</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fugit nihil iste fugiat explicabo,
-                deleniti reprehenderit laboriosam totam rerum voluptatibus voluptatem dolores veritatis, ab consequuntur
-                quidem, facilis est saepe quae?</p></br>
-            <img src="assets/images/mapa.jpg" alt="">
+            <p><b>Actividad:</b> Llevar a cabo una reforestación en la Comunidad de Santiago Xalitzintla, Municipio de San Nicolás de Los Ranchos, como parte de Plan de Reforestación 2026 del Gobierno del Estado, Implementado por la SMADSOT.</p></br>
+
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <img src="assets/images/ima1.png" alt="" class="img">
+                        </div>
+                        <div class="col-lg-12 mt-2">
+                            <img src="assets/images/ima2.png" alt="" class="img">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9"><div id="map" style="height:500px;"></div></div>
+            </div>
+
+            
 
         </div> <!-- section title -->
 
@@ -598,6 +615,43 @@ function generarCarrusel(String $carpeta)
         $(document).ready(function() {
             $('select[name=estado]').attr('style', 'position:absolute;opacity:0 !important;')
         })
+
+        const initialCenter = [19.0770, -98.5620];
+        const initialZoom = 16;
+
+        const map = L.map('map').setView(initialCenter, initialZoom);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap'
+        }).addTo(map);
+
+        const kml = omnivore.kml('datos/poligono.kml').addTo(map);
+
+        const HomeControl = L.Control.extend({
+            options: {
+                position: 'topleft'
+            },
+
+            onAdd: function() {
+                const container = L.DomUtil.create('div', 'leaflet-bar leaflet-control');
+
+                const button = L.DomUtil.create('a', '', container);
+                button.href = '#';
+                button.title = 'Inicio';
+                button.innerHTML = '<i class="ti ti-home" style="font-size:15px"></i>';
+
+                L.DomEvent.disableClickPropagation(container);
+
+                L.DomEvent.on(button, 'click', function(e) {
+                    L.DomEvent.preventDefault(e);
+                    map.setView(initialCenter, initialZoom);
+                });
+
+                return container;
+            }
+        });
+
+        map.addControl(new HomeControl());
     </script>
 </body>
 
