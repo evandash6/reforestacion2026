@@ -5,7 +5,7 @@ require_once 'config/database.php';
 $db = Database::conectar();
 
 $nombre = trim($_POST['nombre']);
-$correo = trim($_POST['correo']);
+$correo = trim($_POST['email']);
 
 if (empty($nombre) || empty($correo)) {
     die("Todos los campos son obligatorios.");
