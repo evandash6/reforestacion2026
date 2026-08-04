@@ -113,7 +113,7 @@ function generarCarrusel(String $carpeta)
             <div class="mi-fluid vh-100">
                 <div class="row h-100 align-items-center">
                     <div class="col-lg-7 text-center text-lg-left">
-                        <span class="text-white fs-36 negritas">Jornada Nacional de Reforestación y Restauración <b class="text-orange">2026</b></span>
+                        <span class="text-white fs-36 negritas">Jornada Nacional de Reforestación</span>
                         <a href="" class="btn btn-success fs-20 mt-3"><i class="ti ti-edit mr-2"></i>Registrarme</a>
                         <span class="text-white mt-2 fs-28 negritas">Santiago Xalitzintla, Municipio de San Nicolás de los Ranchos <span class="text-orange">Puebla</span></span>
                     </div>
