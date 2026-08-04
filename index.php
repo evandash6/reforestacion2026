@@ -387,7 +387,7 @@ function generarCarrusel(String $carpeta)
                 </div>
                 <div class="col-lg-7 mt-4">
                     <div class="contact_form">
-                        <form action="contacto.php" method="POST">
+                        <form id="formContacto" action="contacto.php" method="POST">
                             <input type="hidden" name="csrf" value="<?= $_SESSION['csrf'] ?>">
                             <div class="row">
                                 <div class="col-lg-6">
@@ -639,6 +639,30 @@ function generarCarrusel(String $carpeta)
         });
 
         map.addControl(new HomeControl());
+
+
+        //envio de datos
+        $("#formContacto").on("submit", function(e) {
+            e.preventDefault();
+            let formulario = $(this);
+            $.ajax({
+                url: formulario.attr("action"),
+                type: "POST",
+                data: formulario.serialize(),
+                beforeSend: function() {
+                    alert("Enviando...");
+                },
+                success: function(respuesta) {
+                    alert(respuesta);
+                    formulario[0].reset();
+                },
+                error: function() {
+                    alert("Ocurrió un error al enviar el formulario.");
+                }
+
+            });
+
+        });s
     </script>
 </body>
 
