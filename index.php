@@ -353,7 +353,7 @@ function generarCarrusel(String $carpeta)
         </div>
     </section>
     <!-- REGISTRO -->
-    <section id="registro" class="contact_area bg-secondary pt-80 pb-30">
+    <section id="registro" class="contact_area bg-secondary pt-100 pb-130">
         <div class="mi-fluid">
             <div class="row justify-content-center">
                 <div class="col-lg-12">
@@ -380,7 +380,8 @@ function generarCarrusel(String $carpeta)
                 </div>
                 <div class="col-lg-7 mt-4">
                     <div class="contact_form">
-                        <form action="assets/contact.php" method="POST" id="contact-form" class="wow zoomIn" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                        <form action="contacto.php" method="POST">
+                            <input type="hidden" name="csrf" value="<?= $_SESSION['csrf'] ?>">
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="single_form">
@@ -389,7 +390,7 @@ function generarCarrusel(String $carpeta)
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="single_form">
-                                        <select type="text" required name="sexo" id="sexo" placeholder="Sexo">
+                                        <select type="text" required name="sexo" placeholder="Sexo">
                                             <option value="">Selecciona</option>
                                             <option value="No definido">No definido</option>
                                             <option value="Masculino">Masculino</option>
@@ -411,7 +412,7 @@ function generarCarrusel(String $carpeta)
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="single_form">
-                                        <select name="etnia" class="form-control select2" required="">
+                                        <select name="etnia" required>
                                             <option value="">Grupo de pertenencia</option>
                                             <option value="77">AFROMEXICANO</option>
                                             <option value="70">AMUZGOS</option>
@@ -540,7 +541,7 @@ function generarCarrusel(String $carpeta)
                                 </div>
                                 <div class="col-lg-3">
                                     <div class="single_form">
-                                        <button type="button" class="btn bg-tinto text-white mt-1">Enviar registro</button>
+                                        <button type="submit" class="btn bg-tinto text-white mt-1">Enviar registro</button>
                                     </div>
                                 </div>
                             </div>
@@ -593,7 +594,7 @@ function generarCarrusel(String $carpeta)
         });
 
         $(document).ready(function() {
-            $('select[name=estado]').attr('style', 'position:absolute;opacity:0 !important;')
+            $('select[name=estado],select[name=sexo],select[name=etnia]').attr('style', 'position:absolute;opacity:0 !important;');
         })
 
         const initialCenter = [19.0783, -98.5592];
