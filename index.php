@@ -134,7 +134,7 @@ function generarCarrusel(String $carpeta)
 
         <div id="home" class="header_slider">
             <div class="single_slider bg_cover d-flex align-items-center"
-                style="background-image: url(assets/images/hero-area.jpg)">
+                style="background-image: url(assets/images/fondo.png)">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 col-md-8">
