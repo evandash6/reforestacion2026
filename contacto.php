@@ -4,7 +4,6 @@ date_default_timezone_set('America/Mexico_City');
 session_start();
 
 require_once 'config/database.php';
-
 $db = Database::conectar();
 
 function obtenerIP()
@@ -23,7 +22,8 @@ function obtenerIP()
 
 if (!isset($_POST['csrf']) || !hash_equals($_SESSION['csrf'], $_POST['csrf'])) {
     die('Solicitud inválida');
-} else {
+} 
+else {
     $ip = obtenerIP();
     $nombre = trim($_POST['nombre']);
     $sexo = trim($_POST['sexo']);

@@ -2,6 +2,10 @@
 
 session_start();
 
+if (!isset($_SESSION['csrf'])) {
+    $_SESSION['csrf'] = bin2hex(random_bytes(32));
+}
+
 function generarCarrusel(String $carpeta)
 {
     // Buscar imágenes
