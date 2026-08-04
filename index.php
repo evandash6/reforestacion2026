@@ -59,6 +59,8 @@ function generarCarrusel(String $carpeta)
     <link rel="stylesheet" href="assets/css/leaflet.css">
     <script src="assets/js/leaflet.js"></script>
     <script src="assets/js/leaflet-omnivore.min.js"></script>
+    <!-- sweetalert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body class="bg-tinto">
@@ -650,19 +652,37 @@ function generarCarrusel(String $carpeta)
                 type: "POST",
                 data: formulario.serialize(),
                 beforeSend: function() {
-                    alert("Enviando...");
+                    Swal.fire({
+                        title: "Enviando información...",
+                        text: "Por favor espera",
+                        allowOutsideClick: false,
+                        didOpen: () => {
+                            Swal.showLoading();
+                        }
+                    });
                 },
                 success: function(respuesta) {
-                    alert(respuesta);
+                    Swal.fire({
+                        icon: "success",
+                        title: "¡Enviado!",
+                        text: respuesta,
+                        confirmButtonText: "Aceptar"
+                    });
                     formulario[0].reset();
                 },
                 error: function() {
-                    alert("Ocurrió un error al enviar el formulario.");
+                    Swal.fire({
+                        icon: "error",
+                        title: "Error",
+                        text: "Ocurrió un error al enviar el formulario.",
+                        confirmButtonText: "Aceptar"
+                    });
+
                 }
 
             });
 
-        });s
+        });
     </script>
 </body>
 
