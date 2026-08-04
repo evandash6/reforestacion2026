@@ -94,7 +94,7 @@ function generarCarrusel(String $carpeta)
                     <div class="col-lg-12">
                         <nav class="navbar navbar-expand-lg">
                             <a class="navbar-brand" href="index.html">
-                                <img style="width:200px" src="assets/images/logo.png" alt="Logo">
+                                <img style="width:500px" src="assets/images/logo.png" alt="Logo">
                             </a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse"
                                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -145,6 +145,9 @@ function generarCarrusel(String $carpeta)
                                 <a href="javascript:void(0)" class="wow fadeInLeftBig btn btn-success mt-2 btn-lg"
                                     data-wow-duration="1.3s" data-wow-delay="0.8s"><i
                                         class="ti ti-edit-circle fs-20"></i> Registrarme</a>
+                                <br><br>
+                                <h2 class="text-white">Santiago Xalitzintla, Municipio de San Nicolás de los Ranchos </h2>
+                                <h1 class="text-success wow" data-wow-duration="1.3s" data-wow-delay="0.2s">Puebla</h1>
                             </div> <!-- slider content -->
                         </div>
                         <div class="col-lg-6 text-center align-items-end wow fadeInLeftBig" data-wow-duration="1.3s"
@@ -160,21 +163,21 @@ function generarCarrusel(String $carpeta)
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-lg-12 d-flex justify-content-center align-items-center">
+                                    <div class="col-xl-12 d-flex justify-content-center align-items-center">
                                         <div class="single_counter counter_1 d-flex justify-content-center align-items-center wow fadeInUpBig"
                                             data-wow-duration="1.3s" data-wow-delay="0.2s">
                                             <div class="counter_wrapper">
                                                 <h2><i class="ti ti-seedling text-muted mt-1"></i></h2>
-                                                <span class="counter">534,000</span>
-                                                <p class="text-success mb-1">Planta</p>
+                                                <span class="counter">10,000</span>
+                                                <p class="text-success">Planta</p>
                                             </div> <!-- single wrapper -->
                                         </div>
                                         <div class="single_counter counter_2 d-flex justify-content-center align-items-center wow fadeInUpBig"
                                             data-wow-duration="1.3s" data-wow-delay="0.2s">
                                             <div class="counter_wrapper">
                                                 <h2><i class="ti ti-lasso-polygon text-muted mt-1"></i></h2>
-                                                <span class="counter">1,534</span>
-                                                <p class="text-success mb-1">Superficie</p>
+                                                <span class="counter">10</span>
+                                                <p class="text-success mb-1">Hectáreas</p>
                                             </div> <!-- single wrapper -->
                                         </div>
                                     </div>
@@ -188,161 +191,7 @@ function generarCarrusel(String $carpeta)
     </section>
     <!--====== HEADER PART ENDS ======-->
     <!--====== ABOUT PART START ======-->
-    <section id="actividades" class="about_area pt-130">
-        <div class="container">
-            <div class="section_title text-center pb-25">
-                <h3 class="title">Actividades y/o obras de suelo realizadas en <span class="text-success">2026</span> a
-                    nivel nacional</h3>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 p-3">
-                    <table class="table table-striped table-bordered shadow wow fadeInDown" data-wow-duration="1.3s"
-                        data-wow-delay="0.2s">
-                        <thead>
-                            <tr class="bg-tinto text-white">
-                                <td>Actividad</td>
-                                <td class="text-center">Supercicie</td>
-                                <td class="text-center">Plantas</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Reforestación</td>
-                                <td class="text-center negritas">11,250 ha</td>
-                                <td class="text-center negritas"> 4.6 millones</td>
-                            </tr>
-                            <tr>
-                                <td>Replante</td>
-                                <td class="text-center negritas"> 81,848 ha</td>
-                                <td class="text-center negritas"> 11.8 millones</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <br>
-                    <table class="table table-bordered table-striped shadow wow fadeInDown" data-wow-duration="1.3s"
-                        data-wow-delay="0.2s">
-                        <thead>
-                            <tr class="bg-green text-white">
-                                <td>Actividad</td>
-                                <td class="text-center">Cantidad</td>
-                                <td class="text-center">Unidad</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Cercado de áreas en restauración</td>
-                                <td class="text-right negritas">763</td>
-                                <td class="text-right text-muted">Km</td>
-                            </tr>
-                            <tr>
-                                <td>Brechas cortafuego</td>
-                                <td class="text-right negritas">307</td>
-                                <td class="text-right text-muted">Km</td>
-                            </tr>
-                            <tr>
-                                <td>Roturación con maquinaria</td>
-                                <td class="text-right negritas">1,090</td>
-                                <td class="text-right text-muted">Km</td>
-                            </tr>
-                            <tr>
-                                <td>Zanjas trinchera</td>
-                                <td class="text-right negritas">160</td>
-                                <td class="text-right text-muted">Km</td>
-                            </tr>
-                            <tr>
-                                <td>Terrazas individuales</td>
-                                <td class="text-right negritas">643,000</td>
-                                <td class="text-right text-muted">Piezas</td>
-                            </tr>
-                            <tr>
-                                <td>Rehabilitación de jagüeyes o bordos de almacenamiento de agua</td>
-                                <td class="text-right negritas">4,128</td>
-                                <td class="text-right text-muted">m³</td>
-                            </tr>
-                            <tr>
-                                <td>Presas de gaviones, morillos, mampostería o piedra</td>
-                                <td class="text-right negritas">3,378</td>
-                                <td class="text-right">m³</td>
-                            </tr>
-                            <tr>
-                                <td>Prácticas de conservación de la biodiversidad</td>
-                                <td class="text-right negritas">270</td>
-                                <td class="text-right text-muted">Piezas</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
 
-            </div>
-        </div>
-
-        <!-- <div class="about_wrapper">
-            <div class="about_image bg_cover" style="background-image: url(assets/images/refo1.webp)"></div>
-            <!-- about image -->
-        <!-- <div class="container">
-                <div class="row justify-content-end">
-                    <div class="col-lg-6 bg-danger">
-                        <div class="about_content">
-                            <div class="section_title">
-                                <h3 class="title text-center">Actividades y/o obras de suelo realizadas en 2026 a nivel nacional <span>cantidades</span></h3>
-                                <br>
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <td>Col 1</td>
-                                            <td>Col 2</td>
-                                            <td>Col 3</td>
-                                            <td>Col 4</td>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>dato 1</td>
-                                            <td>dato 2</td>
-                                            <td>dato 3</td>
-                                            <td>dato 4</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <a href="javascript:void(0)" class="main-btn">Leer más..</a>
-                        </div>
-                        <div class="about_counter d-flex flex-wrap">
-                            <div class="single_counter counter_1 d-flex justify-content-center align-items-center wow fadeInUpBig"
-                                data-wow-duration="1.3s" data-wow-delay="0.2s">
-                                <div class="counter_wrapper">
-                                    <span class="counter">534</span>
-                                    <p>Trips Done</p>
-                                </div>
-                            </div>
-                            <div class="single_counter counter_2 d-flex justify-content-center align-items-center wow fadeInUpBig"
-                                data-wow-duration="1.3s" data-wow-delay="0.5s">
-                                <div class="counter_wrapper">
-                                    <span class="counter">424</span>
-                                    <p>Corporate Clients</p>
-                                </div>
-                            </div>
-
-                            <div class="single_counter counter_2 d-flex justify-content-center align-items-center wow fadeInUpBig"
-                                data-wow-duration="1.3s" data-wow-delay="0.8s">
-                                <div class="counter_wrapper">
-                                    <span class="counter">35</span>
-                                    <p>Visited Countries</p>
-                                </div>
-                            </div>
-                            <div class="single_counter counter_1 d-flex justify-content-center align-items-center wow fadeInUpBig"
-                                data-wow-duration="1.3s" data-wow-delay="1.1s">
-                                <div class="counter_wrapper">
-                                    <span class="counter">15</span>
-                                    <p>Team Members</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> 
-        </div>-->
-    </section>
 
     <!--====== ABOUT PART ENDS ======-->
 
@@ -351,26 +200,139 @@ function generarCarrusel(String $carpeta)
     <section id="ubicacion" class="destination_area pt-80 pb-10 container-fluid">
         <div class="section_title text-center pb-25">
             <h3 class="title">Ubicación del predio</h3>
-            <p><b>Actividad:</b> Llevar a cabo una reforestación en la Comunidad de Santiago Xalitzintla, Municipio de San Nicolás de Los Ranchos, como parte de Plan de Reforestación 2026 del Gobierno del Estado, Implementado por la SMADSOT.</p></br>
+            <p style="font-size:20px"><b>Actividad:</b> Realizar una reforestación en la Comunidad de Santiago Xalitzintla, Municipio de San Nicolás de Los Ranchos, como parte de Plan de Reforestación 2026 del Gobierno del Estado, Implementado por la SMADSOT.</p></br>
 
             <div class="row">
                 <div class="col-lg-3">
                     <div class="row">
                         <div class="col-lg-12">
-                            <img src="assets/images/ima1.png" alt="" class="img">
+                            <img src="assets/images/ima1.png" style="height:400px" alt="">
                         </div>
                         <div class="col-lg-12 mt-2">
-                            <img src="assets/images/ima2.png" alt="" class="img">
+                            <img src="assets/images/ima2.png" style="height:400px" alt="">
+                        </div>
+                        <div class="col-lg-12 mt-2">
+
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-9"><div id="map" style="height:500px;"></div></div>
+                <div class="col-lg-6 text-right">
+                    <div id="map" style="height:400px;"></div>
+                    <img src="assets/images/ruta.png" class="mt-2">
+                    <a href="https://www.google.com/maps/dir/San+Pedro+Cholula,+Puebla/19.07924,-98.5605402/@19.069843,-98.4976263,12.48z/data=!4m10!4m9!1m5!1m1!1s0x85cfc8a16b13cfb1:0x2825dd848e53ec4a!2m2!1d-98.3156742!2d19.0715049!1m1!4e1!3e0?entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank"><button type="button" class="btn btn-primary mt-2">Ver ruta de llegada</button></a>
+                </div>
+                <div class="col-lg-3 text-left" style="font-size:25px">
+                    <b>Cantidad de árboles y especies a reforestar en el sitio:</b><br><br> 10,000 árboles de las siguientes especies:
+                    <br> <br>
+                    <ul>
+                        <li>- 4,000 Ocote (Pinus montezumae)</li>
+                        <li>- 4,000 Ocote chino (Pinus leiophylla)</li>
+                        <li>- 1,000 Encino (Quecus laurina)</li>
+                    </ul>
+                    <br>
+                    <span style="font-style: italic;">Cantidad de planta proyectada para entregar en la región: <b>48,500</b></span>
+                    <img src="assets/images/refo_ico.png" style="width:100%" class="img mt-5">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="actividades" class="about_area pt-130">
+
+        <div class="text-center pb-25">
+            <h3 class="title">Actividades y/o obras de suelo realizadas en <span class="text-success">2026</span> por la CONAFOR a nivel nacional: estas actividades fortalecen la restauración forestal, la conservación del suelo y la captación de agua.</h3>
+        </div>
+        <div class="row container-fluid">
+            <div class="col-lg-12 p-3">
+                <table class="table table-striped table-bordered shadow wow fadeInDown" data-wow-duration="1.3s"
+                    data-wow-delay="0.2s">
+                    <thead>
+                        <tr class="bg-tinto text-white">
+                            <td>Actividad</td>
+                            <td class="text-center">Supercicie</td>
+                            <td class="text-center">Plantas</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Reforestación</td>
+                            <td class="text-center negritas">11,250 ha</td>
+                            <td class="text-center negritas"> 4.6 millones</td>
+                        </tr>
+                        <tr>
+                            <td>Replante</td>
+                            <td class="text-center negritas"> 81,848 ha</td>
+                            <td class="text-center negritas"> 11.8 millones</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <h3 class="mt-3">Sitios de reforestación (11,250 ha)</h3>
+                <br>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <img src="assets/images/mapa.png" alt="">
+                    </div>
+                    <div class="col-lg-6">
+                        <table class="table table-bordered table-striped shadow wow fadeInDown" data-wow-duration="1.3s"
+                            data-wow-delay="0.2s">
+                            <thead>
+                                <tr class="bg-green text-white">
+                                    <td>Actividad</td>
+                                    <td class="text-center">Cantidad</td>
+                                    <td class="text-center">Unidad</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Cercado de áreas en restauración</td>
+                                    <td class="text-right negritas">763</td>
+                                    <td class="text-right text-muted">Km</td>
+                                </tr>
+                                <tr>
+                                    <td>Brechas cortafuego</td>
+                                    <td class="text-right negritas">307</td>
+                                    <td class="text-right text-muted">Km</td>
+                                </tr>
+                                <tr>
+                                    <td>Roturación con maquinaria</td>
+                                    <td class="text-right negritas">1,090</td>
+                                    <td class="text-right text-muted">Km</td>
+                                </tr>
+                                <tr>
+                                    <td>Zanjas trinchera</td>
+                                    <td class="text-right negritas">160</td>
+                                    <td class="text-right text-muted">Km</td>
+                                </tr>
+                                <tr>
+                                    <td>Terrazas individuales</td>
+                                    <td class="text-right negritas">643,000</td>
+                                    <td class="text-right text-muted">Piezas</td>
+                                </tr>
+                                <tr>
+                                    <td>Rehabilitación de jagüeyes o bordos de almacenamiento de agua</td>
+                                    <td class="text-right negritas">4,128</td>
+                                    <td class="text-right text-muted">m³</td>
+                                </tr>
+                                <tr>
+                                    <td>Presas de gaviones, morillos, mampostería o piedra</td>
+                                    <td class="text-right negritas">3,378</td>
+                                    <td class="text-right">m³</td>
+                                </tr>
+                                <tr>
+                                    <td>Prácticas de conservación de la biodiversidad</td>
+                                    <td class="text-right negritas">270</td>
+                                    <td class="text-right text-muted">Piezas</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
             </div>
 
-            
-
-        </div> <!-- section title -->
-
+        </div>
     </section>
 
     <!--====== DESTINATION PART ENDS ======-->
@@ -477,8 +439,7 @@ function generarCarrusel(String $carpeta)
                 <div class="col-lg-6">
                     <div class="section_title text-center pb-25">
                         <h3 class="title">Registro</h3>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dianum eirmod tempor invidunt ut
-                            labore et dolore magna </p>
+                        <p style="font-size:20px">Agradecemos a todas las personas, comunidades, instituciones, dependencias y brigadas que participan en esta jornada de restauración forestal. Su participación contribuye al cuidado del medio ambiente y fortalece el compromiso comunitario </p>
                     </div> <!-- section title -->
                 </div>
             </div> <!-- row -->
@@ -486,22 +447,120 @@ function generarCarrusel(String $carpeta)
                 <form action="assets/contact.php" method="POST" id="contact-form" class="wow zoomIn" data-wow-duration="1.3s"
                     data-wow-delay="0.2s">
                     <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-lg-4">
                             <div class="single_form">
                                 <input type="text" required name="name" id="name" placeholder="Nombre">
                             </div> <!-- single form -->
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-2">
+                            <div class="single_form">
+                                <select type="text" required name="sexo" id="sexo" placeholder="Sexo">
+                                    <option value="">Selecciona</option>
+                                    <option value="No definido">No definido</option>
+                                    <option value="Masculino">Masculino</option>
+                                    <option value="Femenino">Femenino</option>
+                                </select>
+                            </div> <!-- single form -->
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="single_form">
+                                <input type="text" required name="edad" id="edad" placeholder="Edad">
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
                             <div class="single_form">
                                 <input type="tel" required name="phone" id="phone" placeholder="Teléfono">
                             </div> <!-- single form -->
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-4">
+                            <div class="single_form">
+                                <select name="etnia" class="form-control select2" required="">
+                                    <option value="">Grupo de pertenencia</option>
+                                    <option value="77">AFROMEXICANO</option>
+                                    <option value="70">AMUZGOS</option>
+                                    <option value="2">AMUZGOS DE OAXACA</option>
+                                    <option value="4">CHATINOS</option>
+                                    <option value="5">CHICHIMECOS JONAZ</option>
+                                    <option value="6">CHINANTECOS</option>
+                                    <option value="7">CHOCHOS O CHOCHOLTECAS</option>
+                                    <option value="8">CHOLES</option>
+                                    <option value="64">CHONTALES</option>
+                                    <option value="9">CHONTALES DE LOS ALTOS DE OAXACA</option>
+                                    <option value="10">CHONTALES DE TABASCO</option>
+                                    <option value="58">COCHIMI</option>
+                                    <option value="3">CORAS</option>
+                                    <option value="59">CUCAPAS</option>
+                                    <option value="72">CUICATECOS</option>
+                                    <option value="73">CUICATECOS</option>
+                                    <option value="11">GUARIJIOS</option>
+                                    <option value="16">HIKAPUES</option>
+                                    <option value="65">HUASTECOS</option>
+                                    <option value="12">HUASTECOS DE SAN LUIS POTOSI</option>
+                                    <option value="13">HUASTECOS DE VERACRUZ</option>
+                                    <option value="14">HUAVES</option>
+                                    <option value="15">HUICHOLES</option>
+                                    <option value="57">KILIWAS</option>
+                                    <option value="55">KUMIAI</option>
+                                    <option value="17">LACANDONES</option>
+                                    <option value="18">MAMES</option>
+                                    <option value="19">MATLAZINCAS</option>
+                                    <option value="71">MAYAS</option>
+                                    <option value="20">MAYAS - PENINSULA DE YUCATAN</option>
+                                    <option value="21">MAYOS</option>
+                                    <option value="22">MAZAHUAS</option>
+                                    <option value="23">MAZATECOS</option>
+                                    <option value="24">MEXICANEROS</option>
+                                    <option value="25">MIXES</option>
+                                    <option value="26">MIXTECOS</option>
+                                    <option value="27">MOCHOS O MOTOZINTLECOS</option>
+                                    <option value="63">NAHUAS</option>
+                                    <option value="28">NAHUAS DE GUERRERO</option>
+                                    <option value="29">NAHUAS DE LA HUASTECA VERACRUZANA</option>
+                                    <option value="32">NAHUAS DE LA SIERRA NORTE DE PUEBLA</option>
+                                    <option value="30">NAHUAS DE MILPA ALTA</option>
+                                    <option value="31">NAHUAS DE MORELOS</option>
+                                    <option value="1">NINGUNA</option>
+                                    <option value="62">OTOMIES</option>
+                                    <option value="33">OTOMIES DEL ESTADO DE MEXICO</option>
+                                    <option value="34">OTOMIES DEL VALLE DEL MEZQUITAL</option>
+                                    <option value="56">PAI PAI</option>
+                                    <option value="68">PAMES</option>
+                                    <option value="35">PAMES DE QUERETARO</option>
+                                    <option value="36">PAMES DE SAN LUIS POTOSI</option>
+                                    <option value="37">PAPAGOS</option>
+                                    <option value="38">PIMAS</option>
+                                    <option value="39">POPOLUCAS</option>
+                                    <option value="40">PUREPECHAS</option>
+                                    <option value="78">QUICHÉ</option>
+                                    <option value="75">RARAMURIS</option>
+                                    <option value="41">SERIS</option>
+                                    <option value="60">SIN ESPECIFICAR</option>
+                                    <option value="42">TARAHUMARAS</option>
+                                    <option value="66">TEPEHUANES</option>
+                                    <option value="43">TEPEHUANES DEL NORTE</option>
+                                    <option value="44">TEPEHUANES DEL SUR</option>
+                                    <option value="45">TLAPANECOS</option>
+                                    <option value="46">TOJOLABALES</option>
+                                    <option value="47">TOTONACOS</option>
+                                    <option value="48">TRIQUIS</option>
+                                    <option value="49">TZOTZILES Y TZELTALES</option>
+                                    <option value="74">WIXARIKA</option>
+                                    <option value="50">YAQUIS</option>
+                                    <option value="67">ZAPOTECOS</option>
+                                    <option value="52">ZAPOTECOS DE LA SIERRA NORTE DE OAXACA</option>
+                                    <option value="53">ZAPOTECOS DE LOS VALLES CENTRALES</option>
+                                    <option value="51">ZAPOTECOS DEL ISTMO DE TEHUANTEPEC</option>
+                                    <option value="69">ZOQUES</option>
+                                    <option value="54">ZOQUES DE CHIAPAS</option>
+                                </select>
+                            </div> <!-- single form -->
+                        </div>
+                        <div class="col-lg-4">
                             <div class="single_form">
                                 <input type="email" required name="email" id="email" placeholder="Correo electrónico">
                             </div> <!-- single form -->
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-4">
                             <div class="single_form">
                                 <select required name="estado">
                                     <option value="" selected="">Estado</option>
