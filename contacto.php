@@ -50,10 +50,10 @@ else {
     $stmt->bind_param("sssisssss",$ip, $nombre, $sexo, $edad, $telefono, $etnia, $email, $estado, $fecha_registro);
 
     if ($stmt->execute()) {
-        echo "Usuario guardado correctamente!!";
+        echo "Gracias por tu registro..!!";
     } else {
 
-        echo "Error al guardar.";
+        echo "Error al enviar tu registro.";
     }
 
     $stmt->close();
