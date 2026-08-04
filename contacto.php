@@ -47,7 +47,7 @@ else {
 
     $stmt = $db->prepare($sql);
 
-    $stmt->bind_param($ip, $nombre, $sexo, $edad, $telefono, $etnia, $email, $estado, $fecha_registro);
+    $stmt->bind_param("sssisssss",$ip, $nombre, $sexo, $edad, $telefono, $etnia, $email, $estado, $fecha_registro);
 
     if ($stmt->execute()) {
         echo "Usuario guardado correctamente.<br><br>";
