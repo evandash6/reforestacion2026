@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 function generarCarrusel(String $carpeta)
 {
     // Buscar imágenes
