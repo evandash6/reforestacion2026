@@ -50,7 +50,7 @@ else {
     $stmt->bind_param("sssisssss",$ip, $nombre, $sexo, $edad, $telefono, $etnia, $email, $estado, $fecha_registro);
 
     if ($stmt->execute()) {
-        echo "Usuario guardado correctamente.<br><br>";
+        echo "Usuario guardado correctamente!!";
     } else {
 
         echo "Error al guardar.";
