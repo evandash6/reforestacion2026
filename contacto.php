@@ -4,6 +4,7 @@ date_default_timezone_set('America/Mexico_City');
 require_once 'config/database.php';
 
 $db = Database::conectar();
+session_start();
 
 
 function obtenerIP()
