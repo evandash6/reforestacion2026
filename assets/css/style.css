@@ -48,11 +48,11 @@ button:focus {
 a:focus,
 a:hover {
   text-decoration: none;
-  color: #A42526;
+  color: #FFC108;
 }
 
 a {
-  color: #A42526;
+  color: #FFC108;
 }
 
 i,
@@ -129,6 +129,17 @@ p {
   height: 100%;
 }
 
+
+.sec_inicio {
+  background-image: url('../../assets/images/fondo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+
 /*===== All Button Style =====*/
 .main-btn {
   display: inline-block;
@@ -151,7 +162,7 @@ p {
   z-index: 5;
   -webkit-transition: all 0.4s ease-out 0s;
   transition: all 0.4s ease-out 0s;
-  background-color: #A42526;
+  background-color: #FFC108;
 }
 
 .main-btn:hover {
@@ -163,13 +174,13 @@ p {
 
 .main-btn.main-btn-2 {
   background-color: #fff;
-  color: #A42526;
-  border-color: #A42526;
+  color: #FFC108;
+  border-color: #FFC108;
 }
 
 .main-btn.main-btn-2:hover {
-  background-color: #A42526;
-  border-color: #A42526;
+  background-color: #FFC108;
+  border-color: #FFC108;
   color: #fff;
 }
 
@@ -198,7 +209,7 @@ p {
 }
 
 .section_title .title span {
-  color: #A42526;
+  color: #FFC108;
 }
 
 .section_title p {
@@ -287,7 +298,7 @@ p {
   height: 100%;
   border-style: solid;
   /* Spinner Color */
-  border-color: #A42526 #A42526 #F9FAFB;
+  border-color: #FFC108 #FFC108 #F9FAFB;
   border-radius: 50%;
   border-width: 6px;
 }
@@ -480,7 +491,6 @@ p {
 ===========================*/
 /*===== NAVBAR =====*/
 .header_navbar {
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -493,7 +503,9 @@ p {
 .sticky {
   position: fixed;
   z-index: 99;
-  background-color: #fff;
+  background: #621132;
+  background: linear-gradient(91deg, rgba(98, 17, 50, 1) 0%, rgba(0, 0, 0, 0.92) 100%);
+  color: white !important;
   -webkit-box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.05);
   box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.05);
   -webkit-transition: all 0.3s ease-out 0s;
@@ -542,12 +554,13 @@ p {
 
 .navbar-toggler {
   padding: 0;
+  color: white !important;
 }
 
 .navbar-toggler .toggler-icon {
   width: 30px;
   height: 2px;
-  background-color: #fff;
+  color: #fff;
   display: block;
   margin: 5px 0;
   position: relative;
@@ -588,10 +601,11 @@ p {
 @media (max-width: 767px) {
   .navbar-collapse {
     position: absolute;
+    border-radius: 15px;
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: #fff;
+    background-color: #8a8686;
     z-index: 9;
     -webkit-box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
@@ -620,7 +634,7 @@ p {
   left: 0;
   width: 0;
   height: 3px;
-  background-color: #A42526;
+  background-color: #FFC108;
   -webkit-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
 }
@@ -641,7 +655,6 @@ p {
   .navbar-nav .nav-item a {
     display: block;
     padding: 4px 0;
-    color: #222;
   }
 }
 
@@ -649,7 +662,6 @@ p {
   .navbar-nav .nav-item a {
     display: block;
     padding: 4px 0;
-    color: #222;
   }
 }
 
@@ -725,7 +737,7 @@ p {
 .navbar-nav .nav-item .sub-menu li a.active,
 .navbar-nav .nav-item .sub-menu li a:hover {
   padding-left: 25px;
-  color: #A42526;
+  color: #FFC108;
 }
 
 .navbar-nav .sub-nav-toggler {
@@ -777,13 +789,13 @@ p {
   background-color: #222;
 }
 
-.sticky .navbar-nav .nav-item a {
+/* .sticky .navbar-nav .nav-item a {
   color: #222;
-}
+} */
 
 .sticky .navbar-nav .nav-item.active>a,
 .sticky .navbar-nav .nav-item:hover>a {
-  color: #A42526;
+  color: #FFC108;
 }
 
 /*===== SLIDER =====*/
@@ -861,7 +873,7 @@ p {
 
 .slider_content .slider_title span {
   display: contents;
-  color: #A42526;
+  color: #FFC108;
 }
 
 .slider_content p {
@@ -948,11 +960,12 @@ p {
 }
 
 .single_counter {
-  background-color: #fff;
+  background: #ffffff;
+  background: linear-gradient(36deg, rgba(255, 255, 255, 1) 0%, rgba(107, 107, 107, 0) 79%);
   -webkit-box-shadow: 0px 0px 25px 0px rgba(173, 206, 243, 0.25);
   box-shadow: 0px 0px 25px 0px rgba(173, 206, 243, 0.25);
-  width: 300px;
-  height: 242px;
+  width: 200px;
+  height: 200px;
   text-align: center;
   margin-top: 30px;
   margin-left: 15px;
@@ -1079,7 +1092,7 @@ p {
   height: 35px;
   line-height: 35px;
   text-align: center;
-  background-color: #A42526;
+  background-color: #FFC108;
   color: #fff;
   border-radius: 50%;
   -webkit-transition: all 0.3s ease-out 0s;
@@ -1090,7 +1103,7 @@ p {
 }
 
 .single_destination:hover .destination_content {
-  background-color: #A42526;
+  background-color: #FFC108;
 }
 
 .single_destination:hover .destination_content .title a {
@@ -1102,7 +1115,7 @@ p {
 }
 
 .single_destination:hover .destination_content .more {
-  color: #A42526;
+  color: #FFC108;
   background-color: #fff;
 }
 
@@ -1121,12 +1134,12 @@ p {
 .single_service .services_icon i {
   width: 75px;
   height: 75px;
-  border: 2px solid #A42526;
+  border: 2px solid #FFC108;
   line-height: 71px;
   text-align: center;
   border-radius: 50%;
   font-size: 40px;
-  color: #A42526;
+  color: #FFC108;
   -webkit-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
 }
@@ -1162,7 +1175,7 @@ p {
 }
 
 .single_service:hover .services_icon i {
-  background: #A42526;
+  background: #FFC108;
   color: #fff;
 }
 
@@ -1184,7 +1197,7 @@ p {
   height: 73px;
   line-height: 73px;
   text-align: center;
-  background-color: #A42526;
+  background-color: #FFC108;
   color: #fff;
   border-radius: 50%;
   font-size: 30px;
@@ -1327,7 +1340,7 @@ p {
 
 .single_team .team_content .social li a:hover {
   background-color: #fff;
-  color: #A42526;
+  color: #FFC108;
 }
 
 .single_team:hover .team_image::before {
@@ -1389,7 +1402,7 @@ p {
 .single_testimonial i {
   font-size: 60px;
   line-height: 60px;
-  color: #A42526;
+  color: #FFC108;
   position: absolute;
   top: 30px;
   right: 30px;
@@ -1430,7 +1443,7 @@ p {
   width: 15px;
   height: 15px;
   background: none;
-  border: 2px solid #A42526;
+  border: 2px solid #FFC108;
   border-radius: 50%;
   font-size: 0;
   -webkit-transition: all 0.3s ease-out 0s;
@@ -1440,7 +1453,7 @@ p {
 }
 
 .testimonial_active .slick-dots li.slick-active button {
-  background-color: #A42526;
+  background-color: #FFC108;
 }
 
 /*===========================
@@ -1521,7 +1534,7 @@ p {
 }
 
 .single_blog .blog_content .blog_title a:hover {
-  color: #A42526;
+  color: #FFC108;
 }
 
 .single_blog .blog_content p {
@@ -1530,7 +1543,7 @@ p {
 
 .single_blog .blog_content .more {
   margin-top: 15px;
-  color: #A42526;
+  color: #FFC108;
   font-size: 16px;
   font-weight: 500;
 }
@@ -1698,7 +1711,7 @@ p {
 
 .single_form input:focus,
 .single_form textarea:focus {
-  border-color: #A42526;
+  border-color: #FFC108;
 }
 
 .single_form textarea {
@@ -1736,7 +1749,7 @@ p {
 }
 
 .single_form .nice-select:focus {
-  border-color: #A42526;
+  border-color: #FFC108;
 }
 
 .single_form .nice-select .current {
@@ -1837,7 +1850,7 @@ p {
 }
 
 .footer_link .link li a:hover {
-  color: #A42526;
+  color: #FFC108;
 }
 
 .footer_subscribe p {
@@ -1865,7 +1878,7 @@ p {
   border: 0;
   font-size: 28px;
   color: #fff;
-  background-color: #A42526;
+  background-color: #FFC108;
   border-radius: 5px;
   position: absolute;
   right: 10px;
@@ -1883,7 +1896,7 @@ p {
   height: 40px;
   line-height: 40px;
   border-radius: 5px;
-  background-color: #A42526;
+  background-color: #FFC108;
   text-align: center;
   z-index: 99;
   -webkit-transition: all 0.3s ease-out 0s;
@@ -1893,7 +1906,7 @@ p {
 
 .back-to-top:hover {
   color: #fff;
-  background-color: #A42526;
+  background-color: #FFC108;
 }
 
 /*# sourceMappingURL=style.css.map */
@@ -2191,15 +2204,25 @@ p {
 }
 
 .bg-tinto {
-  background-color: #781F21 !important;
+  background: #621132;
+  background: linear-gradient(91deg, rgba(98, 17, 50, 1) 0%, rgba(0, 0, 0, 0.92) 100%);
 }
 
-.text-tinto{
-  color: #781F21;
+.text-tinto {
+  color: #621132;
+}
+
+.bg-orange {
+  background-color: #FFC108;
+}
+
+.text-orange {
+  color: #FFC108;
 }
 
 .bg-green {
-  background-color: #1F6B3A;
+  background: #1F6B3A;
+  background: linear-gradient(90deg, rgba(31, 107, 58, 1) 16%, rgba(5, 5, 5, 0.7) 100%);
 }
 
 .negritas {
@@ -2232,16 +2255,40 @@ p {
 }
 
 .carousel-item img {
-    cursor: zoom-in;
+  cursor: zoom-in;
 }
 
 .carousel-item a {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
 
 .carousel-item img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
+  min-height: 25vh;
+  max-height: 60vh;
+  object-fit: cover;
+}
+
+.mi-fluid {
+  width: 90%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+}
+
+.bg-gradient-superior {
+  background: #ffffff;
+  background: linear-gradient(174deg, rgba(255, 255, 255, 1) 16%, rgba(107, 107, 107, 1) 100%);
+}
+
+.seccion-recomendaciones{
+    background: linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #f8f9fa 50%,
+        #eef2f3 100%
+    );
+    padding: 80px 0;
 }
