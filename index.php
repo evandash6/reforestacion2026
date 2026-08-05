@@ -162,7 +162,7 @@ function generarCarrusel(String $carpeta)
                 <ul>
                     <li>- 4,000 Ocote (Pinus montezumae)</li>
                     <li>- 4,000 Ocote chino (Pinus leiophylla)</li>
-                    <li>- 1,000 Encino (Quecus laurina)</li>
+                    <li>- 2,000 Encino (Quecus rugosa)</li>
                 </ul>
                 <br>
                 <br>
