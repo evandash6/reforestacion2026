@@ -114,7 +114,7 @@ function generarCarrusel(String $carpeta)
                 <div class="row h-100 align-items-center">
                     <div class="col-lg-7 text-center text-lg-left">
                         <span class="text-white fs-36 negritas">Jornada Nacional de Reforestación</span>
-                        <a href="" class="btn btn-success fs-20 mt-3"><i class="ti ti-edit mr-2"></i>Registrarme</a>
+                        <a href="#registro" class="btn btn-success fs-20 mt-3"><i class="ti ti-edit mr-2"></i>Registrarme</a>
                         <span class="text-white mt-2 fs-28 negritas">Santiago Xalitzintla, Municipio de San Nicolás de los Ranchos <span class="text-orange">Puebla</span></span>
                     </div>
                     <div class="col-lg-5 text-center">
@@ -149,7 +149,7 @@ function generarCarrusel(String $carpeta)
     <section id="ubicacion" class="destination_area pt-80 pb-120">
         <div class="section_title text-center pb-25 mi-fluid">
             <span class="fs-36 text-tinto negritas">Ubicación del predio</span>
-            <p class="fs-28"><b class="text-success">Actividad:</b> Realizar una reforestación en la Comunidad de Santiago Xalitzintla, Municipio de San Nicolás de Los Ranchos, como parte de Plan de Reforestación 2026 del Gobierno del Estado, Implementado por la SMADSOT.</p>
+            <p class="fs-28" style="line-height: 1.2;"><b class="text-success">Actividad:</b> Realizar una reforestación en la Comunidad de Santiago Xalitzintla, Municipio de San Nicolás de Los Ranchos, con participación comunitaria, contribuyendo a la recuperación de ecosistemas, la captación de agua, la conservación de suelos y el fortalecimiento del tejido social en zonas forestales prioritarias.</p>
             <hr>
         </div>
         <div class="row mt-1 mi-fluid">
