@@ -113,7 +113,7 @@ function generarCarrusel(String $carpeta)
             <div class="mi-fluid vh-100">
                 <div class="row h-100 align-items-center">
                     <div class="col-lg-7 text-center text-lg-left">
-                        <span class="text-white fs-36 negritas">Jornada Nacional de Reforestación</span>
+                        <span class="text-white fs-36 negritas">Jornada Nacional de Reforestación</span><br>
                         <a href="#registro" class="btn btn-success fs-20 mt-3"><i class="ti ti-edit mr-2"></i>Registrarme</a>
                         <span class="text-white mt-2 fs-28 negritas">Santiago Xalitzintla, Municipio de San Nicolás de los Ranchos <span class="text-orange">Puebla</span></span>
                     </div>
@@ -153,8 +153,18 @@ function generarCarrusel(String $carpeta)
             <hr>
         </div>
         <div class="row mt-1 mi-fluid">
-            <div class="col-lg-5 text-right polaroid shadow pl-2 mt-2">
-                <div id="map" style="height:350px;z-index:80;"></div>
+            <div class="col-lg-5 polaroid shadow pl-2 mt-2">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div id="map" style="height:350px;z-index:80;"></div>
+                    </div>
+                </div>
+                <div class="row mt-2 align-items-end mb-2 pl-3">
+                    <h6>Distancias al predio</h6>
+                    <div class="col-lg-12 mt-2"><img class="mr-2" style="width:35px" src="assets/images/marker-icon_1.png" alt=""> - Estacionamiento 1 : <b>1,350 metros </b> </div>
+                    <div class="col-lg-12 mt-1"><img class="mr-2" style="width:35px" src="assets/images/marker-icon_3.png" alt=""> - Estacionamiento 2 : <b>350 metros </b> </div>
+                    <div class="col-lg-12 mt-1"><img class="mr-2" style="width:35px" src="assets/images/marker-icon_2.png" alt=""> - Estacionamiento 3 : <b>120 metros </b> </div>
+                </div>
             </div>
             <div class="col-lg-4 text-left mt-2" style="font-size:20px">
                 <b class="text-success">Cantidad de árboles y especies a reforestar en el sitio:</b><br><br> 10,000 árboles de las siguientes especies:
@@ -192,7 +202,7 @@ function generarCarrusel(String $carpeta)
         </div>
     </section>
     <!-- ACTIVIDADES -->
-    <section id="actividades" class="about_area pt-80 pb-80 bg-secondary">
+    <!-- <section id="actividades" class="about_area pt-80 pb-80 bg-secondary">
 
         <div class="text-center pb-25">
             <h3 class="title text-white">Actividades y/o obras de suelo realizadas en <span class="text-success">2026</span> por la CONAFOR a nivel nacional: estas actividades fortalecen la restauración forestal, la conservación del suelo y la captación de agua.</h3>
@@ -287,7 +297,7 @@ function generarCarrusel(String $carpeta)
             </div>
 
         </div>
-    </section>
+    </section> -->
     <!-- RECOMENDACIONES -->
     <section id="recomendacion" class="services_area pt-80 seccion-recomendaciones">
         <div class="mi-fluid">
@@ -328,6 +338,10 @@ function generarCarrusel(String $carpeta)
                         <li class="list-group-item d-flex align-items-center gap-3">
                             <i class="ti ti-ambulance fs-32 mr-3 text-info"></i>
                             <span>En caso de malestar, avisa de inmediato al responsable de brigada.</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center gap-3">
+                            <i class="ti ti-shovel fs-32 mr-3 text-info"></i>
+                            <span>Preferentemente llevar pala o herramienta para realizar la reforestación.</span>
                         </li>
                     </ul>
                 </div>
@@ -593,6 +607,25 @@ function generarCarrusel(String $carpeta)
     <!-- GLIGhTBOX -->
     <script src="assets/js/glightbox.min.js"></script>
     <script>
+        function obtenerIcono(feature) {
+
+            switch (feature.properties.styleUrl) {
+
+                case "#waypoint-pin_1":
+                    return iconoRojo;
+
+                case "#waypoint-pin_2":
+                    return iconoAzul;
+
+                case "#waypoint-pin_3":
+                    return iconoVerde;
+
+                default:
+                    return iconoDefault;
+            }
+
+        }
+
         const lightbox = GLightbox({
             selector: '.glightbox',
             loop: true,
@@ -614,7 +647,57 @@ function generarCarrusel(String $carpeta)
             attribution: '&copy; OpenStreetMap'
         }).addTo(map);
 
-        const kml = omnivore.kml('datos/poligono.kml').addTo(map);
+        const iconos = {
+            "#waypoint-pin_1": L.icon({
+                iconUrl: "assets/images/marker-icon_1.png",
+                iconSize: [32, 32],
+                iconAnchor: [16, 32]
+            }),
+
+            "#waypoint-pin_2": L.icon({
+                iconUrl: "assets/images/marker-icon_2.png",
+                iconSize: [32, 32],
+                iconAnchor: [16, 32]
+            }),
+
+            "#waypoint-pin_3": L.icon({
+                iconUrl: "assets/images/marker-icon_3.png",
+                iconSize: [32, 32],
+                iconAnchor: [16, 32]
+            })
+        };
+
+        const kml = omnivore
+            .kml("datos/poligono.kml")
+            .on("ready", function() {
+
+                this.eachLayer(function(layer) {
+                    // Si es un marcador, asignar icono
+                    if (layer instanceof L.Marker) {
+                        const estilo = layer.feature.properties.styleUrl;
+                        if (iconos[estilo]) {
+                            layer.setIcon(iconos[estilo]);
+                        }
+                    }
+
+                    // Si es un polígono, aplicar estilo
+                    if (layer instanceof L.Polygon) {
+                        layer.setStyle({
+                            color: "#00ff00", // color del borde
+                            weight: 2,
+                            opacity: 1,
+
+                            fillColor: "#00ff00", // color de relleno
+                            fillOpacity: 0.5
+                        });
+
+                    }
+
+                });
+
+                map.fitBounds(this.getBounds());
+            })
+            .addTo(map);
 
         const HomeControl = L.Control.extend({
             options: {

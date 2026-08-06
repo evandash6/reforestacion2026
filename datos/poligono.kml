@@ -1,67 +1,253 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
-<Document>
-	<name>Polígono propuesto Xalixintla.kmz</name>
-	<StyleMap id="msn_ylw-pushpin">
-		<Pair>
-			<key>normal</key>
-			<styleUrl>#sn_ylw-pushpin</styleUrl>
-		</Pair>
-		<Pair>
-			<key>highlight</key>
-			<styleUrl>#sh_ylw-pushpin</styleUrl>
-		</Pair>
-	</StyleMap>
-	<Style id="sh_ylw-pushpin">
-		<IconStyle>
-			<scale>1.3</scale>
-			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
-			</Icon>
-			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
-		</IconStyle>
-		<BalloonStyle>
-		</BalloonStyle>
-		<LineStyle>
-			<color>ff00ff00</color>
-			<width>1.6</width>
-		</LineStyle>
-		<PolyStyle>
-			<color>8000ff00</color>
-		</PolyStyle>
-	</Style>
-	<Style id="sn_ylw-pushpin">
-		<IconStyle>
-			<scale>1.1</scale>
-			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
-			</Icon>
-			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
-		</IconStyle>
-		<BalloonStyle>
-		</BalloonStyle>
-		<LineStyle>
-			<color>ff00ff00</color>
-			<width>1.6</width>
-		</LineStyle>
-		<PolyStyle>
-			<color>8000ff00</color>
-		</PolyStyle>
-	</Style>
-	<Placemark>
-		<name>Polígono propuesto Xalixintla</name>
-		<styleUrl>#msn_ylw-pushpin</styleUrl>
-		<Polygon>
-			<tessellate>1</tessellate>
-			<outerBoundaryIs>
-				<LinearRing>
-					<coordinates>
-						-98.56209658235954,19.07947114925349,0 -98.56207569959709,19.07891358270906,0 -98.56158665109422,19.07840996035637,0 -98.55958148095762,19.07817582481748,0 -98.55853029738296,19.07858057196018,0 -98.5573482278752,19.07832506352785,0 -98.55563582409142,19.07701982275723,0 -98.5572792113135,19.08023730061072,0 -98.56209658235954,19.07947114925349,0 
-					</coordinates>
-				</LinearRing>
-			</outerBoundaryIs>
-		</Polygon>
-		<atom:link rel="app" href="https://www.google.com/earth/about/versions/#earth-pro" title="Google Earth Pro 7.3.7.1155"></atom:link>
-	</Placemark>
-</Document>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Capa Estandarizada</name>
+
+    <!-- Definición de Estilos Nativos -->
+    <Style id="style21">
+      <LineStyle>
+        <color>ff00ff00</color>
+        <width>2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>ff0000ff</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+
+    <Style id="style10">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>ff00ff00</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+
+    <Style id="style00">
+      <LineStyle>
+        <color>ff0000ff</color>
+        <width>2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>ffff0000</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+
+    <Style id="poligono">
+      <LineStyle>
+        <color>ff00ff00</color>
+        <width>2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>7f00ff00</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+
+    <Style id="waypoint-pin_1">
+      <IconStyle>
+        <scale>1.3</scale>
+        <Icon>
+          <href>img/pin-rojo.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+
+    <Style id="waypoint-pin_2">
+      <IconStyle>
+        <scale>1.3</scale>
+        <Icon>
+          <href>img/pin-azul.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+
+    <Style id="waypoint-pin_3">
+      <IconStyle>
+        <scale>1.3</scale>
+        <Icon>
+          <href>img/pin-verde.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+
+    <!-- Elementos Geográficos -->
+    <Placemark>
+      <styleUrl>#style21</styleUrl>
+      <ExtendedData>
+        <Data name="id_2"><value>1</value></Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>
+          -98.55785059850653,19.08031072599827
+          -98.55790800872066,19.08030660256096
+          -98.55826884894306,19.08024165132089
+          -98.55854489171323,19.08018572108649
+          -98.55871268241665,19.08016226647199
+          -98.55890392773453,19.08014061605865
+          -98.5592106419236,19.08012798665082
+          -98.55937121582258,19.08012076984642
+        </coordinates>
+      </LineString>
+    </Placemark>
+
+    <Placemark>
+      <styleUrl>#style10</styleUrl>
+      <ExtendedData>
+        <Data name="id_2"><value>1</value></Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>
+          -98.5554696883587,19.08029387713201
+          -98.55549579183379,19.08030660256096
+          -98.55564914892832,19.0803751622032
+          -98.55580972282732,19.08043830924216
+          -98.55596127572072,19.08046898066104
+          -98.5561362832286,19.08045995965546
+          -98.55620845127308,19.08043470083986
+          -98.5564195428032,19.08042928823658
+          -98.55659455031106,19.08041305042656
+          -98.55682729225452,19.08040042101876
+          -98.55699508295795,19.08039320421437
+          -98.55728375513587,19.08035712019212
+          -98.55758144831935,19.08033005717541
+          -98.55790800872066,19.08030660256096
+          -98.55826884894306,19.08024165132089
+          -98.55854489171323,19.08018572108649
+          -98.55871268241665,19.08016226647199
+          -98.55890392773453,19.08014061605865
+          -98.5592106419236,19.08012798665085
+          -98.55937121582258,19.08012076984642
+        </coordinates>
+      </LineString>
+    </Placemark>
+
+    <Placemark>
+      <styleUrl>#style00</styleUrl>
+      <ExtendedData>
+        <Data name="id_2"><value>1</value></Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>
+          -98.54738410363382,19.07890473829688
+          -98.54785139172184,19.07895706012911
+          -98.54834033022323,19.07897871054245
+          -98.54869214944007,19.07899314415136
+          -98.54897180061245,19.07898592734689
+          -98.54913598291364,19.078987731548
+          -98.5493975920749,19.07901840296692
+          -98.5496195088117,19.07901299036359
+          -98.54983240454291,19.07899314415136
+          -98.54999297844188,19.07895164752578
+          -98.55013731453084,19.07892278030797
+          -98.55034118925653,19.07889932569352
+          -98.55050176315552,19.07889210888909
+          -98.55069300847339,19.07890654249799
+          -98.55085358237235,19.07889391309019
+          -98.551008743668,19.0788957172913
+          -98.55123607300813,19.07891917190575
+          -98.55141468891823,19.07892458450908
+          -98.55154639559939,19.07896247273244
+          -98.5517232073084,19.07902381557025
+          -98.55190362741959,19.07908155000584
+          -98.55208043912859,19.07914830544701
+          -98.5523185936754,19.07921506088815
+          -98.5525152515966,19.07928903313372
+          -98.55262350366333,19.07934676756931
+          -98.55278588176341,19.07940630620601
+          -98.55298073548352,19.07946764904382
+          -98.55327121186257,19.07956146750166
+          -98.55349132439824,19.07963724394838
+          -98.55373849995058,19.0797003909873
+          -98.55389185704513,19.07974008341176
+          -98.55404521413963,19.07978158003734
+          -98.55417331241863,19.07982307666292
+          -98.55428878128978,19.07983029346735
+          -98.55451791483102,19.07989163630516
+          -98.55465503411556,19.07993493713188
+          -98.55479034919895,19.07999267156744
+          -98.55496535670682,19.08006664381304
+          -98.55507000037133,19.08011174884088
+          -98.5551692314325,19.08016046227089
+          -98.55535145574484,19.0802362387176
+          -98.55549579183379,19.08030660256096
+          -98.55564914892832,19.0803751622032
+          -98.55580972282732,19.08043830924216
+          -98.55596127572072,19.08046898066104
+          -98.5561362832286,19.0804599596555
+          -98.55620845127308,19.08043470083994
+          -98.5564195428032,19.08042928823658
+          -98.55659455031106,19.08041305042656
+          -98.55682729225452,19.0804004210188
+          -98.55699508295795,19.08039320421437
+          -98.55728375513587,19.08035712019212
+          -98.55758144831935,19.08033005717541
+          -98.55790800872066,19.08030660256096
+          -98.55826884894306,19.08024165132093
+          -98.55854489171323,19.08018572108645
+          -98.55871268241665,19.08016226647196
+          -98.55890392773453,19.08014061605865
+          -98.5592106419236,19.08012798665085
+          -98.55937121582258,19.08012076984642
+        </coordinates>
+      </LineString>
+    </Placemark>
+
+    <Placemark>
+      <name>Polígono propuesto Xalixintla</name>
+      <styleUrl>#poligono</styleUrl>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+              -98.56209658235954,19.07947114925349
+              -98.5572792113135,19.08023730061072
+              -98.55563582409142,19.07701982275723
+              -98.5573482278752,19.07832506352785
+              -98.55853029738296,19.07858057196018
+              -98.55958148095762,19.07817582481748
+              -98.56158665109422,19.07840996035637
+              -98.56207569959709,19.07891358270906
+              -98.56209658235954,19.07947114925349
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+
+    <Placemark>
+      <name>Puntos de referencia 1</name>
+      <description>estacionamiento...3</description>
+      <styleUrl>#waypoint-pin_1</styleUrl>
+      <Point>
+        <coordinates>-98.547375,19.07899</coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Puntos de referencia 2</name>
+      <description>estacionamiento</description>
+      <styleUrl>#waypoint-pin_2</styleUrl>
+      <Point>
+        <coordinates>-98.557915,19.0811</coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Puntos de referencia 3</name>
+      <description>opciones estacionamiento</description>
+      <styleUrl>#waypoint-pin_3</styleUrl>
+      <Point>
+        <coordinates>-98.555054,19.080406</coordinates>
+      </Point>
+    </Placemark>
+  </Document>
 </kml>

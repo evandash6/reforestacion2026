@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+
+    <!-- ESTILOS -->
+
+    <Style id="poligono">
+        <LineStyle>
+            <color>ff00ff00</color>
+            <width>2</width>
+        </LineStyle>
+        <PolyStyle>
+            <color>7f00ff00</color>
+        </PolyStyle>
+    </Style>
+
+    <Style id="waypoint-pin_1">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>img/pin-rojo.png</href>
+            </Icon>
+        </IconStyle>
+    </Style>
+
+    <Style id="waypoint-pin_2">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>img/pin-azul.png</href>
+            </Icon>
+        </IconStyle>
+    </Style>
+
+    <Style id="waypoint-pin_3">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>img/pin-verde.png</href>
+            </Icon>
+        </IconStyle>
+    </Style>
+
+    <!-- POLIGONO -->
+
+    <Placemark>
+
+        <name>Polígono propuesto Xalixintla</name>
+
+        <styleUrl>#poligono</styleUrl>
+
+        <Polygon>
+            <outerBoundaryIs>
+                <LinearRing>
+                    <coordinates>
+                        -98.56209658235954,19.07947114925349
+                        -98.5572792113135,19.08023730061072
+                        -98.55563582409142,19.07701982275723
+                        -98.5573482278752,19.07832506352785
+                        -98.55853029738296,19.07858057196018
+                        -98.55958148095762,19.07817582481748
+                        -98.56158665109422,19.07840996035637
+                        -98.56207569959709,19.07891358270906
+                        -98.56209658235954,19.07947114925349
+                    </coordinates>
+                </LinearRing>
+            </outerBoundaryIs>
+        </Polygon>
+
+    </Placemark>
+
+    <!-- PUNTO 1 -->
+
+    <Placemark>
+
+        <name>Puntos de referencia 1</name>
+
+        <styleUrl>#waypoint-pin_1</styleUrl>
+
+        <description><![CDATA[
+            estacionamiento...3
+        ]]></description>
+
+        <Point>
+            <coordinates>-98.547375,19.07899</coordinates>
+        </Point>
+
+    </Placemark>
+
+    <!-- PUNTO 2 -->
+
+    <Placemark>
+
+        <name>Puntos de referencia 2</name>
+
+        <styleUrl>#waypoint-pin_2</styleUrl>
+
+        <description><![CDATA[
+            estacionamiento
+        ]]></description>
+
+        <Point>
+            <coordinates>-98.557915,19.0811</coordinates>
+        </Point>
+
+    </Placemark>
+
+    <!-- PUNTO 3 -->
+
+    <Placemark>
+
+        <name>Puntos de referencia 3</name>
+
+        <styleUrl>#waypoint-pin_3</styleUrl>
+
+        <description><![CDATA[
+            opciones estacionamiento
+        ]]></description>
+
+        <Point>
+            <coordinates>-98.555054,19.080406</coordinates>
+        </Point>
+
+    </Placemark>
+
+</Document>
+</kml>
