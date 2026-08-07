@@ -167,12 +167,13 @@ function generarCarrusel(String $carpeta)
                 </div>
             </div>
             <div class="col-lg-4 text-left mt-2" style="font-size:20px">
-                <b class="text-success">Cantidad de árboles y especies a reforestar en el sitio:</b><br><br> 10,000 árboles de las siguientes especies:
+                <b class="text-success">Cantidad de árboles y especies a reforestar en el sitio:</b><br><br> 12,000 árboles de las siguientes especies:
                 <br> <br>
                 <ul>
-                    <li>- 4,000 Ocote (Pinus montezumae)</li>
+                    <li>- 4,500 Ocote (Pinus montezumae)</li>
                     <li>- 4,000 Ocote chino (Pinus leiophylla)</li>
-                    <li>- 2,000 Encino (Quercus rugosa)</li>
+                    <li>- 2,300 Encino (Quercus rugosa)</li>
+                    <li>- 1,200 Ayacahuite (Pinus ayacahuite)</li>
                 </ul>
                 <br>
                 <br>
