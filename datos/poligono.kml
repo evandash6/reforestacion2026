@@ -6,11 +6,11 @@
     <!-- Definición de Estilos Nativos -->
     <Style id="style21">
       <LineStyle>
-        <color>ff00ff00</color>
+        <color>8800ff00</color>
         <width>2</width>
       </LineStyle>
       <PolyStyle>
-        <color>ff0000ff</color>
+        <color>880000ff</color>
         <fill>1</fill>
         <outline>1</outline>
       </PolyStyle>
