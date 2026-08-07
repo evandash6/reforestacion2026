@@ -126,7 +126,7 @@ function generarCarrusel(String $carpeta)
                                     data-wow-duration="1.3s" data-wow-delay="0.2s">
                                     <div class="counter_wrapper">
                                         <h2><i class="ti ti-seedling mt-1 text-white"></i></h2>
-                                        <span class="counter">10,000</span>
+                                        <span class="counter">12,000</span>
                                         <p class="text-tinto">Planta</p>
                                     </div>
                                 </div>
