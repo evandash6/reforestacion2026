@@ -3188,7 +3188,7 @@
             options: {
                 iconUrl: "marker-icon.png",
                 iconRetinaUrl: "marker-icon-2x.png",
-                shadowUrl: "marker-shadow.png",
+                shadowUrl: "../../images/marker-shadow.png",
                 iconSize: [41, 41],
                 iconAnchor: [41, 41],
                 popupAnchor: [1, -34],
