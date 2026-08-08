@@ -118,8 +118,8 @@ function generarCarrusel(String $carpeta)
                         <span class="text-white mt-2 fs-28 negritas">Santiago Xalitzintla, Municipio de San Nicolás de los Ranchos <span class="text-orange">Puebla</span></span>
                     </div>
                     <div class="col-lg-5 text-center">
-                        <h3 class="text-white">Fecha del evento</h3>
-                        <h4 class="text-white"><i class="ti ti-calendar mr-2 fs-28"></i> <span class="text-orange">09 de Agosto del 2026</span></h4>
+                        <h3 class="text-white">Fecha y hora del evento</h3>
+                        <h4 class="text-white"><i class="ti ti-calendar mr-2 fs-28"></i> <span class="text-orange">09 de Agosto del 2026 - 10 am</span></h4>
                         <div class="row d-none d-md-block">
                             <div class="col-xl-12 d-flex justify-content-center align-items-center">
                                 <div class="single_counter counter_1 d-flex justify-content-center align-items-center wow fadeInUpBig"
